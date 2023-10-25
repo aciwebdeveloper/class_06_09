@@ -1,5 +1,7 @@
 <?php
 
+
+//////////////////////////////Interfaces ////////////////////////
 interface MyInterface {
     public function doSomething();
     public function doSomethingElse();
@@ -40,6 +42,9 @@ $obj = new MyOtherClass();
 echo $obj->doSomething();
 
 
+
+//////////////////////////////////Static Methods and Properties
+
 class Student
 {
     static public $userData = 'Student data';
@@ -50,5 +55,24 @@ class Student
     }
 }
 echo Student::getProperty();
+
+///////////////////////Abstract Class//////////////
+
+
+abstract class AbstractClass {
+    abstract public function getName();
+}
+
+class ConcreteClass extends AbstractClass {
+    public function getName() {
+
+        echo 'GetName';
+
+    }
+}
+
+
+
+
 
 ?>
